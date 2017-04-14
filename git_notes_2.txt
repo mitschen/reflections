@@ -7,3 +7,33 @@ create an empty repository from the scratch
 * git commit will add the staging area to the repository (locally?). If the default editor is specified, an editor will open to write the commit-note. Alternative: use git commit -m "Lala Land" instead
 ** styleguide for commit comment http://udacity.github.io/git-styleguide/
 * Please note: whenever changing a file in the working copy, that was already added to the staging area, you must call git add again in order to apply the latest change to the staging area as well
+* compare working director against staging area: git diff (no argu)
+* compare staging area against repository: git diff --staged
+* git reset --hard: resets any changes in working as well as staging area
+* git checkout master: fetch the head revision from Repositoy
+* commits will not affect the remote repository!! Only the local one!!
+* In git, labels are branches
+* git branch will create a new branch
+** git branch without arguments, will show available branches
+** git branch name will create a new branch with the game
+** create a new branch (up to master automatically) and call git checkout branchname to switch to the new branch instead
+** any changes will only affect this new branch!
+** to see which branches are available use: git log --graph --oneline branch1 branch2
+*** The branch must be checked out before you can call the graph on it
+** get checkout -b branchname is similar to the two commands git branch branchname and git checkout branchname
+** any submits on a changelist not head will be first of all opaque to any branch. You must subsequently call get checkout -b branchname to create a new branch which contains this commit
+
+merging branches:
+* if you me two branches, the old labels could be removed (they are absolete because they are accessible via the new branch)
+* git merge branch1 branch2 => both branches must be already checkedout
+** alternativ: checkout to branch1 and call git merge branch2
+* git show commit => allows to see the differences between a certain commit and it's parent
+** helpful in case that there are several branches merged, i don't see the real change of the commit
+* git branch -d branchname => will remove a certain branch. make sure that this is already merged - otherwise it is lost
+* some information for that https://classroom.udacity.com/courses/ud775/lessons/2969618657/concepts/29892386280923
+* git merge --abort will cancel the merge
+* if the merge failed, the failing file contains both changes <<<<< HEAD ==== >>>> other. Edit the merge, add it to the staging area and submit is afterwards
+
+PLEASE NOTE: all changes only affect the local (on my machine) repository
+
+* git merge from to
