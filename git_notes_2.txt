@@ -1,0 +1,9 @@
+Notes from lessen 2
+
+create an empty repository from the scratch
+* git init create/ init a new directory of the folder currently in. Creating of the repository will not apply any commits!
+* staging area: more or less a temp folder which should be prepared for a commit. The whole staging area could be committed at once
+* git add file will add a file to a staging area (double check by git status)
+* git commit will add the staging area to the repository (locally?). If the default editor is specified, an editor will open to write the commit-note. Alternative: use git commit -m "Lala Land" instead
+** styleguide for commit comment http://udacity.github.io/git-styleguide/
+* Please note: whenever changing a file in the working copy, that was already added to the staging area, you must call git add again in order to apply the latest change to the staging area as well

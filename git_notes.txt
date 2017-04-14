@@ -1,0 +1,29 @@
+git log ==> gibt eine Übersicht über alle Änderungen die eingecheckt wurden.
+* muss im Repository Ordner ausgeführt werden
+* mit "q" wird das Ding wieder verlassen
+git diff FileVersionX FileVersionY => die Änderungen zwischen zwei Revisionen
+git clone url ==> zieht das komplette Repository auf den Lokalen Rechner
+git config --global color.ui.auto => macht die Diffs farbig, sollte einmal ausgeführt werden
+git checkout ID => revert all files to a certain revision
+==> git log shows only the logs to the checkout ID 
+git status => shows which files has changed
+
+create an empty repository from the scratch
+* git init create/ init a new directory of the folder currently in. Creating of the repository will not apply any commits!
+*
+
+Git Meta data:
+* everything is stored in the main directory under .git
+* 
+
+Setup the workspace:
+* background color: console editor ;-(
+* editing of bashrc to do so (https://www.udacity.com/api/nodes/3341718587/supplemental_media/bash-profile-course/download?_ga=1.37232743.672083044.1467344711 )
+* Bash colouring and setup instructions can be found here: http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+* the udacity page to setup the stuff is here https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33417185870923
+
+Error Messages:
+* Should not be doing an octopus
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+* You are in 'detached HEAD' state
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
