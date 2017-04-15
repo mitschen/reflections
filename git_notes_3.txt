@@ -1,0 +1,3 @@
+git_notes_3.txt
+Git Hub introcution
+GitHub is more or less the public server repository for any projects. A free account allows to host public code - 
