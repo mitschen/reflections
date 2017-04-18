@@ -1,3 +1,54 @@
 git_notes_3.txt
 Git Hub introcution
 GitHub is more or less the public server repository for any projects. A free account allows to host public code - 
+* git remote will link a GITHub to the local Repository
+* git remote add <name> <url>  ==> erzeugt ein neuen remote/ added. Remote must be already created on the GITHub page
+* git remove -v : all remotes written in verbose mode
+*!!! MAKE sure to add the remote while being in the reflections/ destinated branch folder!!!
+After the remote with <name> was created, i can store data on it. This is done via
+* git push <remote> <branchname> (in our case git push origin master)
+
+* File could be created on GitHub directly.
+* To sync the GitHubMaster to the local Master we need to call pull
+* git pull <remote> <branch>
+
+Forking Repositories:
+* Take a repository from GitHub and push it in my Account on GitHub. Two seperated Repositories. Fork is a clone on GitHub
+* Forks are linkes on GitHub
+** Cloning of local repositories is possible as well
+
+* cloning can be done on GitHub ==> will then available in my profile
+* call git clone "url" to get the clone on local repository
+
+* Fast forward merge: the branch you want to merge into is a ancestor (is reachable for the current branch)
+
+
+
+Merging conflicts:
+What happens if there are changes on GitHub as well as on Local Repository?
+In principle, a local clone is always a remote/branch name. Whenever you do a submit you're creating a local new branch next to remote/branch. So when there are changes on GitHub, the remote/branch will go on while your local branch is staying as it is.
+* git fetch will sync the remote/branch of the GitHub to your local repository. Then you need to merge them back to 
+* git pull remote = git fetch origin and git merge master origin/master
+* call git branch -a to see all available branches of a repository
+* On GitHub you can specify who's is allowed to collaborate to the repository
+
+* A local change can be made visible on the GitHub to get feeback from other developers. This is being done by creating a local branch, add the changes there and push them on the GitHub. Merging this change to the master can be done on GitHub
+==> pull request: merge the changes to the master 
+
+In details:
+git branch "newName"
+make the changes
+add and commit them
+git push remote newName
+
+furhter changes are done locally (as above) and pushed the same way to git hub
+
+On GitHub then do the pullRequest. Check the base to be used.
+
+
+ALWAYS GO TO THE BRANCH YOU WANT TO MERGE IN!
+
+
+Note for Windows Users: The story has grown so large that it exceeds Windows' path length limit. If you encounter an error when cloning you can work around it by modifying a configuration setting. Run this command in git bash: git config --system core.longpaths true.
+
+Last excercise: https://classroom.udacity.com/courses/ud775/lessons/3105028581/concepts/30806791210923

@@ -9,6 +9,17 @@ create an empty repository from the scratch
 * Please note: whenever changing a file in the working copy, that was already added to the staging area, you must call git add again in order to apply the latest change to the staging area as well
 * compare working director against staging area: git diff (no argu)
 * compare staging area against repository: git diff --staged
+
+So calling 
+* git fetch remote will sync the remote master to the local repository
+* git diff remote/master master will show the differences between the two
+
+git status will tell you
+* ahead: you have more changes than the master
+* behind: the GitHub remote master has more changes than you have
+* up-to-date: no differences on both sides
+* out-of-sync: both have changes
+
 * git reset --hard: resets any changes in working as well as staging area
 * git checkout master: fetch the head revision from Repositoy
 * commits will not affect the remote repository!! Only the local one!!
@@ -37,3 +48,6 @@ merging branches:
 PLEASE NOTE: all changes only affect the local (on my machine) repository
 
 * git merge from to
+
+
+ALWAYS GO TO THE BRANCH YOU WANT TO MERGE IN!
